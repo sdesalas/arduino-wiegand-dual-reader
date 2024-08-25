@@ -24,7 +24,7 @@ If you're using a newer ESP32 board make sure you replace `ICACHE_RAM_ATTR` belo
 
 ```cpp
 
-#include "WiegandMullti.h"
+#include "WiegandMultiReader.h"
 
 // Define Reader 1 (Card reader)
 WIEGAND cardReader();
