@@ -36,7 +36,7 @@
 #include "../src/WiegandMullti.h"
 
 // Define Reader 1 (Card reader)
-WIEGAND cardReader("cardReader");
+WIEGAND cardReader();
 int cardPinD0 = 5; // D1 (GPIO5) GREEN "D0"
 int cardPinD1 = 4; // D2 (GPIO4) WHITE "D1"
 int cardStatusLED = 0; // D3 (GPIO0) STATUS LED --> ON = OK
