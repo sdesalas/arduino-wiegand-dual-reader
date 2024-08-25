@@ -1,7 +1,10 @@
 # arduino-wiegand-multi-reader
-A multi-reader library for Wiegand Access Devices, for Arduino and ESP8266
+
+A multi-reader library for Wiegand Access Devices, for Arduino _and_ ESP8266/ESP32
 
 Based on [`monkeyboard/Wiegand-Protocol-Library-for-Arduino`](https://github.com/monkeyboard/Wiegand-Protocol-Library-for-Arduino).
+
+<img width="500" src="img/IMG_20240825_192013.jpg">
 
 # Different Wiegand libraries comparison
 
@@ -11,6 +14,7 @@ Based on [`monkeyboard/Wiegand-Protocol-Library-for-Arduino`](https://github.com
 | [Wiegand NG library](https://github.com/jpliew/Wiegand-NG-Multi-Bit-Wiegand-Library-for-Arduino) | This is another single reader library, however it uses dynamic memory to store the raw wiegand thus allowing unlimited bit length to be stored as long as your Arduino board has the memory to store it. I won't recommend to use this library unless you are facing a non-standard wiegand reader that sends out data that will not be decoded by the original Wiegand library. | Single | Arduino/AVR, ESP8266, ESP32  |
 | [Multi Wiegand library](https://github.com/jpliew/Multi-Reader-Wiegand-Protocol-Library-for-Arduino) | This library uses pin change interrupt, thus allowing all the pin change interrupt supported pins to be used. With this, multiple readers can also be supported. Due to a workaround (hack) used to overcome the limitation with `attachInterrupt` not being able to be attached to the class method directly, the initialisation of the sketch is more ugly and complicated. | Multi | Arduino/AVR |
 | **Wiegand Multi Reader** (this one) | This library support multiple Wiegand readers (as many as you have pins for), however it can also be used in ESP32/ESP8266 devices because it does not depend on the [`PinInterruptChange` library](https://github.com/NicoHood/PinChangeInterrupt) that is only supported in AVR platform | Multi | Arduino/AVR, ESP8266, ESP32  |
+
 
 # Licensing / Credits
 
