@@ -10,7 +10,7 @@
 class WIEGAND {
 
 public:
-	WIEGAND(const char*);
+	WIEGAND();
 	bool available();
   void ReadD0();
 	void ReadD1();
@@ -27,7 +27,6 @@ private:
 	volatile int				_bitCount;	
 	int				_wiegandType;
 	unsigned long	_code;
-  const char* _device;
 };
 
 #endif

@@ -35,6 +35,7 @@
 
 #include "../src/WiegandMullti.h"
 
+// Define Reader 1 (Card reader)
 WIEGAND cardReader("cardReader");
 int cardPinD0 = 5; // D1 (GPIO5) GREEN "D0"
 int cardPinD1 = 4; // D2 (GPIO4) WHITE "D1"
@@ -46,7 +47,8 @@ void ICACHE_RAM_ATTR cardReadD1() {
   cardReader.ReadD1();
 }
 
-WIEGAND keypadReader("keypadReader");
+// Define Reader 2 (Keypad)
+WIEGAND keypadReader();
 int keypadPinD0 = 12; // D6 (GPIO12) GREEN "D0"
 int keypadPinD1 = 13; // D7 (GPIO13) WHITE "D1"
 int keypadStatusLED = 14; // D5 (GPIO14) STATUS LED 13;  --> ON = OK
@@ -65,15 +67,15 @@ void setup() {
   pinMode(cardPinD0, INPUT);
   pinMode(cardPinD1, INPUT);
   pinMode(cardStatusLED, OUTPUT);
-	attachInterrupt(digitalPinToInterrupt(cardPinD0), cardReadD0, FALLING);
-	attachInterrupt(digitalPinToInterrupt(cardPinD1), cardReadD1, FALLING);
+  attachInterrupt(digitalPinToInterrupt(cardPinD0), cardReadD0, FALLING);
+  attachInterrupt(digitalPinToInterrupt(cardPinD1), cardReadD1, FALLING);
 
   Serial.println("Starting Wiegand Keypad..");
   pinMode(keypadPinD0, INPUT);
   pinMode(keypadPinD1, INPUT);
   pinMode(keypadStatusLED, OUTPUT);
-	attachInterrupt(digitalPinToInterrupt(keypadPinD0), keypadReadD0, FALLING);
-	attachInterrupt(digitalPinToInterrupt(keypadPinD1), keypadReadD1, FALLING);
+  attachInterrupt(digitalPinToInterrupt(keypadPinD0), keypadReadD0, FALLING);
+  attachInterrupt(digitalPinToInterrupt(keypadPinD1), keypadReadD1, FALLING);
   
   Serial.println("Ready for input..");
 }

@@ -5,11 +5,9 @@ volatile unsigned long _lastWiegand=0;
 unsigned long _code=0;
 volatile int _bitCount=0;	
 int _wiegandType=0;
-const char* _name;
 
-WIEGAND::WIEGAND(const char* name)
+WIEGAND::WIEGAND()
 {
-  _name = name;
 	_lastWiegand = 0;
 	_cardTempHigh = 0;
 	_cardTemp = 0;
