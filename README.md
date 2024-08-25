@@ -8,14 +8,6 @@ Based on [`monkeyboard/Wiegand-Protocol-Library-for-Arduino`](https://github.com
 
 <img width="500" src="img/IMG_20240825_192013.jpg">
 
-# Different Wiegand libraries comparison
-
-| Library | Description | Single/Multi Device | Chip Support |
-| ---| --- | --- | --- | 
-| [Wiegand library](https://github.com/monkeyboard/Wiegand-Protocol-Library-for-Arduino) | This is the easiest and cleanest library to use when only a single wiegand reader is needed. I strongly suggest to use this version if you only need one reader support | Single | Arduino/AVR, ESP8266, ESP32  |
-| [Multi Wiegand library](https://github.com/jpliew/Multi-Reader-Wiegand-Protocol-Library-for-Arduino) | This library uses pin change interrupt, thus allowing all the pin change interrupt supported pins to be used. With this, multiple readers can also be supported. Due to a workaround (hack) used to overcome the limitation with `attachInterrupt` not being able to be attached to the class method directly, the initialisation of the sketch is more ugly and complicated. | Multi | Arduino/AVR |
-| **Wiegand Multi Reader** (this one) | This library support multiple Wiegand readers (as many as you have pins for), however it can also be used in ESP32/ESP8266 devices. | Multi | Arduino/AVR, ESP8266, ESP32  |
-
 # Usage
 
 This example is for ESP8266 boards.
@@ -90,7 +82,15 @@ void loop() {
 
 ```
 
+# Schematic
+
 <img src="docs/sketch.png">
+
+Given that most Wiegand devices are 12V rated (to support longer wires due to voltage drop), we need to make sure that we work around the signal voltage differences by using a 10K Ohm resistor pulling excess voltage to ground.
+
+This way the microcontroller will only receive minimal amperage using the voltage that its running at.
+
+<img width="500" src="img/IMG_20240825_133449.jpg">
 
 # Licensing / Credits
 
