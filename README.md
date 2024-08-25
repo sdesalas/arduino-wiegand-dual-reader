@@ -98,6 +98,7 @@ void loop() {
 
 ```
 
+<img src="docs/sketch.png">
 
 # Licensing / Credits
 
