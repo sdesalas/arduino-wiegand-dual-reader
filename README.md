@@ -42,7 +42,7 @@ void ICACHE_RAM_ATTR cardReadD1() {
 WIEGAND keypadReader();
 int keypadPinD0 = 12; // D6 (GPIO12) GREEN "D0"
 int keypadPinD1 = 13; // D7 (GPIO13) WHITE "D1"
-int keypadStatusLED = 14; // D5 (GPIO14) STATUS LED 13;  --> ON = OK
+int keypadStatusLED = 14; // D5 (GPIO14) STATUS LED --> ON = OK
 void ICACHE_RAM_ATTR keypadReadD0() {
   keypadReader.ReadD0();
 }
