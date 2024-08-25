@@ -1,6 +1,8 @@
 # arduino-wiegand-multi-reader
 
-A multi-reader library for Wiegand Access Devices, for Arduino _and_ ESP8266/ESP32
+A multi-reader library for Wiegand Access Devices, for Arduino _and_ ESP8266/ESP32.
+
+Supports protocols for 4 bit, 8 bit, 24 bit, 26 bit, 32 bit and 34 bit Wiegand.
 
 Based on [`monkeyboard/Wiegand-Protocol-Library-for-Arduino`](https://github.com/monkeyboard/Wiegand-Protocol-Library-for-Arduino).
 
