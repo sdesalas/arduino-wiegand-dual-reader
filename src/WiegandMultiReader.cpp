@@ -1,4 +1,4 @@
-#include "WiegandMullti.h"
+#include "WiegandMultiReader.h"
 
 volatile unsigned long _cardTemp=0;
 volatile unsigned long _lastWiegand=0;
