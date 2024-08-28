@@ -33,7 +33,7 @@
  *  
  */
 
-#include "../src/WiegandMultiReader.h"
+#include "../WiegandMultiReader.h"
 
 // Define Reader 1 (Card reader)
 WIEGAND cardReader();
